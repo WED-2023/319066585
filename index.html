@@ -2,9 +2,15 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="style.css" />
+<title>סבתא ורדה</title>
+<br/>
 </head>
 <body>
+<header>
+  <h1>הדף של סבתא ורדה</h1>
+</header>
 <div id="menu">
+  <li><img class="round-img" width="40" height="40" src="תמונות/סבתא 7.jpg" alt="סבתא 7"></li>
 <li><a href="#about">About Me</a></li>
 <li><a href="#photos">My Photos</a></li>
 <li><a href="#playlist">My Playlist</a></li>
@@ -15,165 +21,193 @@
 </div>
 		  
 <section id="about" class="section">
+<h2>about me</h2>
+<hr>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-about me
-<br/>
-<br/>
+<p>סבתא ורדה נולדה בשנת 1938 בחצי האי ג'רבה, טוניס. כשהייתה צעירה, בשנת 1951, עלתה לארץ באונייה והייתה בין הראשונים שהתיישבו במושב בית הגדי שבצפון הנגב</p>
+<p>עם עלייתה לארץ, עבדה בחקלאות בקיבוץ סעד, ושם פגשה את בעלה פרז'י אליהו, סבא שלי. יחד הקימו משפחה וברבות השנים נולדו להם עשרה ילדים</p>
+<p>במשך השנים ניהלו משק חקלאי וגידלו בו פרות, תרנגולות, פרחים ועוד. סבתא ורדה הייתה אישה שמחה, מלאה באנרגיה חיובית, וידועה במיוחד בהכנסת האורחים החמה שלה – דלת ביתה הייתה תמיד פתוחה לכולם</p>
+<p>בנוסף, הייתה בשלנית מדהימה, והכינה את המאכלים המסורתיים שלה בטעמים ייחודיים שאי אפשר לשחזר</p>
+<p>כולם כינו אותה כמלכת הדומינו, וכל בני המשפחה למדו ממנה את סודות המשחק</p>
 <br/>
 </section>
 
 <section id="photos" class="section">
+<h2>my photos</h2>
+<hr>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my photos
-<br/>
-<br/>
+<div class="gallery">
+  <img src="תמונות/סבתא 1.jpg" alt="סבתא 1">
+  <img src="תמונות/סבתא 2.jpg" alt="סבתא 2">
+  <img src="תמונות/סבתא 3.jpg" alt="סבתא 3">
+  <img src="תמונות/סבתא 4.jpg" alt="סבתא 4">
+  <img src="תמונות/סבתא 5.jpg" alt="סבתא 5">
+  <img src="תמונות/סבתא 6.jpg" alt="סבתא 6">
+</div>
 <br/>
 </section>
 
 <section id="playlist" class="section">
+  <h2>my playlist</h2>
+  <hr>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my playlist
-<br/>
-<br/>
+  <div class="songs video">
+    <iframe width="350" height="300" src="https://www.youtube.com/embed/0dBBDR7jLtw" allowfullscreen></iframe>
+    <iframe width="350" height="300" src="https://www.youtube.com/embed/0dEKX-5ne-E" allowfullscreen></iframe>
+    <iframe width="350" height="300" src="https://www.youtube.com/embed/LbZZLW5HLlY" allowfullscreen></iframe>
+    <iframe width="350" height="300" src="https://www.youtube.com/embed/UYmwA0ctopQ" allowfullscreen></iframe>
+  </div>
 <br/>
 </section>
+
+
+
 
 <section id="like" class="section">
+  <h2>Give me a like</h2>
+  <hr>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-give me a like
-<br/>
-<br/>
-<br/>
+  <p>תנו לנו לייק!</p>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v22.0"></script>  
+  <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="" data-layout="" data-action="" data-size="" data-share="true"></div>
+  <button onclick="addLike()">Like👍</button>
+  <span id="likeCount">0</span> Likes
+
+  <script>
+    let likeCount = localStorage.getItem('likeCount') ? parseInt(localStorage.getItem('likeCount')) : 0;
+    document.getElementById('likeCount').innerText = likeCount;
+    function addLike() {
+        likeCount++;
+        document.getElementById('likeCount').innerText = likeCount;
+        localStorage.setItem('likeCount', likeCount);
+    }
+  </script>
 </section>
 
+
+
+
+
+
+
 <section id="qrcoder" class="section">
+<h2>my code</h2>
+<hr>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-scan my code
-<br/>
+<img src="תמונות/QR.png" alt="QR">
 <br/>
 <br/>
 </section>
 
 <section id="spa" class="section">
+  <h2>ans</h2>
+  <hr>
+  <div class="ans" style="text-align: right;">
+    <p>Q1:</p>
+    <p>שלושה הבדלים מרכזיים בין גרסאות ה-Web:</p>
+    <p>אופי האינטראקציה עם התוכן</p>
+    <p>Web 1</p>
+    <p>המשתמשים היו בעיקר צרכני מידע ללא יכולת לתרום תוכן או להגיב. אתרים היו סטטיים וכללו בעיקר טקסט ותמונות פשוטות</p>
+    <p>Web 2</p>
+    <p>האינטרנט הפך לאינטראקטיבי – משתמשים יכלו ליצור, לשתף ולהגיב לתוכן, מה שהוביל לצמיחת רשתות חברתיות, בלוגים ופורומים</p>
+    <p>Web 3</p>
+    <p>מרחיב את היכולות האינטראקטיביות בעזרת טכנולוגיות מתקדמות כמו בינה מלאכותית ובלוקצ’יין, ומאפשר חוויית שימוש מותאמת אישית לצד אינטגרציה של מכשירים חכמים</p>
 <br/>
+
+    <p>השימוש בטכנולוגיות</p>
+    <p>Web 1</p>
+    <p>הסתמך בעיקר על HTML סטטי, ללא אינטראקציות מתקדמות</p>
+    <p>Web 2</p>
+    <p>נוספו טכנולוגיות כמו JavaScript שאיפשרו יצירת אתרים דינמיים עם תגובות בזמן אמת</p>
+    <p>Web 3</p>
+    <p>מבוסס על שילוב של AI, למידת מכונה ובלוקצ'יין, ומאפשר למערכות להתאים את המידע באופן חכם ואוטומטי לכל משתמש</p>
 <br/>
+
+    <p>שליטה על הנתונים</p>
+    <p>Web 1</p>
+    <p>כל המידע היה בבעלות בעלי האתרים, והמשתמשים היו צרכנים פסיביים</p>
+    <p>Web 2</p>
+    <p>פלטפורמות גדולות החלו לאסוף מידע רב על המשתמשים ולנתח את פעילותם לצרכים מסחריים</p>
+    <p>Web 3</p>
+    <p>משנה את המודל הזה בעזרת טכנולוגיות מבוזרות, כך שהשליטה על המידע חוזרת למשתמשים, והם מחליטים מי יכול לגשת אליו וכיצד להשתמש בו</p>
 <br/>
+
+
+
+    <p>Q1:</p>
+    <p>שלושה הבדלים מרכזיים בין גרסאות ה-Web:</p>
+    <p>אינטראקציה עם התוכן</p>
+    <p>Web 1</p>
+    <p>משתמש שמחפש סרט מומלץ לצפייה ימצא עמוד טקסט פשוט עם המלצות של כותב האתר, ללא אפשרות להגיב, לשתף או לקבל הצעות נוספות</p>
+    <p>Web 2</p>
+    <p>המשתמש יכול למצוא המלצות על סרטים בבלוג או באתר המלצות לצפייה שמאפשר הוספת תגובות משתמשים, דירוגים ושיתוף ברשתות חברתיות</p>
+    <p>Web 3</p>
+    <p>מאפשר חוויית חיפוש חכמה יותר – מערכת מבוססת בינה מלאכותית יכולה להציע למשתמש סרט מותאם אישית לפי העדפותיו, היסטוריית צפייה ודפוסי חיפוש קודמים</p>
 <br/>
+
+    <p>טכנולוגיות</p>
+    <p>Web 1</p>
+    <p>מציג את ההמלצה על הסרט בדף HTML פשוט, ללא עיצוב מתקדם או אינטראקטיביות</p>
+    <p>Web 2</p>
+    <p>האתרים משתמשים ב-CSS ובעיצוב דינמי, ומאפשרים גם הצגת תמונות, סרטונים ותגובות משתמשים</p>
+    <p>Web 3</p>
+    <p>המערכת יכולה במקרים מסויימים להתחבר למסכים חכמים בבית, לדוגמה – לשלוח את סרטים המומלצים ישירות לטלוויזיה או להציע סרטים נוספים למשתמש שהוא לא ידע על קיומם</p>
 <br/>
+
+    <p>שליטה על הנתונים</p>
+    <p>Web 1</p>
+    <p>המידע באתר נשאר קבוע וללא איסוף נתונים על המשתמשים</p>
+    <p>Web 2</p>
+    <p>מנועי חיפוש ואתרי המלצות על סרטים אוספים מידע על הרגלי החיפוש של המשתמשים כדי להציע להם תוכן מותאם אישית, אך גם לצרכים פרסומיים</p>
+    <p>Web 3</p>
+    <p>מאפשר למשתמשים לשמור על פרטיותם ולשלוט במידע שלהם, כך שהם יכולים לבחור אם לשתף נתונים מסוימים או לקבל המלצות באופן אנונימי</p>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-ans
-<br/>
+  </div>
 <br/>
 <br/>
 </section>
 
 <section id="contact" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-contact me
-<br/>
+<h2>contact me</h2>
+<hr>
+<section id="contact" class="section">
+  <form id="contForm">
+      <label for="name">שם:</label>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">אימייל:</label>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="message">הודעה:</label>
+      <textarea id="message" name="message" required></textarea><br><br>
+
+      <label for="emoji">בחר חייכן:</label>
+      <select id="emoji" name="emoji">
+          <option value="😊">😊</option>
+          <option value="😢">😢</option>
+          <option value="😂">😂</option>
+          <option value="😃">😃</option>
+      </select><br><br>
+      <button type="submit">שלח</button>
+  </form>
+</section>
 <br/>
 <br/>
 </section>
+
+<script>
+  document.getElementById('contForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      let name = document.getElementById('name').value;
+      let email = document.getElementById('email').value;
+      let message = document.getElementById('message').value;
+      let emoji = document.getElementById('emoji').value;
+      let mailLink = "https://mail.google.com/mail/?view=cm&fs=1&to=kadosiy@post.bgu.ac.il&su=New+Message+From+" + name + "&body=Name: " + name + "%0AEmail: " + email + "%0AMessage: " + message + " " + emoji;
+      window.open(mailLink, '_blank');
+  });
+  </script>
+
 
 
 <script type="text/javascript">
